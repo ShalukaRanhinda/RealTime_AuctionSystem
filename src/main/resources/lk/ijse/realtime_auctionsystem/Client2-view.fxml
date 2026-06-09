@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.realtime_auctionsystem.Client2.Client2Controller"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Auction Participant" textFill="#2c3e50">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblStatus" layoutX="300.0" layoutY="20.0" text="Not Connected" textFill="#7f8c8d">
+            <font>
+                <Font name="System Italic" size="16.0" />
+            </font>
+        </Label>
+        
+        <Label fx:id="lblHighestBid" layoutX="14.0" layoutY="64.0" text="Current Highest Bid: $0.0" textFill="#27ae60">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        
+        <TextField fx:id="txtBidAmount" layoutX="14.0" layoutY="105.0" prefHeight="35.0" prefWidth="200.0" promptText="Enter bid amount ($)" />
+        <Button fx:id="btnPlaceBid" layoutX="230.0" layoutY="105.0" mnemonicParsing="false" onAction="#handlePlaceBid" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Place Bid" />
+        
+        <TextArea fx:id="txtArea" editable="false" layoutX="14.0" layoutY="160.0" prefHeight="226.0" prefWidth="572.0" style="-fx-font-family: 'Consolas'; -fx-font-size: 14px;" />
+    </children>
+</AnchorPane>

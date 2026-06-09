@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.realtime_auctionsystem.Server.ServerController"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Auction Server Dashboard" textFill="#2c3e50">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="txtArea" editable="false" layoutX="14.0" layoutY="103.0" prefHeight="283.0" prefWidth="572.0" style="-fx-font-family: 'Consolas'; -fx-font-size: 14px;" />
+        <Label fx:id="lblCurrentBid" layoutX="14.0" layoutY="64.0" text="Current Highest Bid: $0.0" textFill="#27ae60">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblHighestBidder" layoutX="250.0" layoutY="64.0" text="Highest Bidder: None" textFill="#2980b9">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnCloseAuction" layoutX="476.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleCloseAuction" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="Close Auction">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
