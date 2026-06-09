@@ -48,7 +48,6 @@ public class ServerController {
 
                     Platform.runLater(() -> txtArea.appendText("New client connected\n"));
                     
-                    // Send current state to new client
                     sendToClient(socket, "UPDATE:" + highestBid + ":" + highestBidder);
                     if (!isAuctionOpen) {
                         sendToClient(socket, "WINNER:" + highestBidder + ":" + highestBid);
@@ -76,7 +75,6 @@ public class ServerController {
                         continue;
                     }
 
-                    // Format: BID:amount:bidderName
                     String[] parts = message.split(":", 3);
                     if (parts.length >= 3) {
                         try {

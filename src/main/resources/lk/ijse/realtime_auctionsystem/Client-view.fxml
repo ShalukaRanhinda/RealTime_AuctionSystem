@@ -20,14 +20,20 @@
             </font>
         </Label>
         
-        <Label fx:id="lblHighestBid" layoutX="14.0" layoutY="64.0" text="Current Highest Bid: $0.0" textFill="#27ae60">
+        <Label fx:id="lblItemName" layoutX="14.0" layoutY="50.0" text="Item: Waiting for server..." textFill="#8e44ad">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        
+        <Label fx:id="lblHighestBid" layoutX="14.0" layoutY="75.0" text="Current Highest Bid: LKR 0.0" textFill="#27ae60">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
         
-        <TextField fx:id="txtBidAmount" layoutX="14.0" layoutY="105.0" prefHeight="35.0" prefWidth="200.0" promptText="Enter bid amount ($)" />
-        <Button fx:id="btnPlaceBid" layoutX="230.0" layoutY="105.0" mnemonicParsing="false" onAction="#handlePlaceBid" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Place Bid" />
+        <TextField fx:id="txtBidAmount" layoutX="14.0" layoutY="115.0" prefHeight="35.0" prefWidth="200.0" promptText="Enter bid amount (LKR)" />
+        <Button fx:id="btnPlaceBid" layoutX="230.0" layoutY="115.0" mnemonicParsing="false" onAction="#handlePlaceBid" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Place Bid" />
         
         <TextArea fx:id="txtArea" editable="false" layoutX="14.0" layoutY="160.0" prefHeight="226.0" prefWidth="572.0" style="-fx-font-family: 'Consolas'; -fx-font-size: 14px;" />
     </children>

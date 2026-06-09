@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="lk.ijse.realtime_auctionsystem.Client2.Client2Controller"
-            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.realtime_auctionsystem.Client2.Client2Controller">
     <children>
         <Label layoutX="14.0" layoutY="14.0" text="Auction Participant" textFill="#2c3e50">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Label fx:id="lblStatus" layoutX="300.0" layoutY="20.0" text="Not Connected" textFill="#7f8c8d">
+        <Label fx:id="lblStatus" layoutX="300.0" layoutY="20.0" text="Not Connected" textFill="#ebf1f2">
             <font>
                 <Font name="System Italic" size="16.0" />
             </font>
         </Label>
         
-        <Label fx:id="lblHighestBid" layoutX="14.0" layoutY="64.0" text="Current Highest Bid: $0.0" textFill="#27ae60">
+        <Label fx:id="lblItemName" layoutX="14.0" layoutY="50.0" text="Item: Waiting for server..." textFill="#250333">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        
+        <Label fx:id="lblHighestBid" layoutX="14.0" layoutY="75.0" text="Current Highest Bid: LKR 0.0" textFill="#1e201f">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
         
-        <TextField fx:id="txtBidAmount" layoutX="14.0" layoutY="105.0" prefHeight="35.0" prefWidth="200.0" promptText="Enter bid amount ($)" />
-        <Button fx:id="btnPlaceBid" layoutX="230.0" layoutY="105.0" mnemonicParsing="false" onAction="#handlePlaceBid" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Place Bid" />
+        <TextField fx:id="txtBidAmount" layoutX="14.0" layoutY="115.0" prefHeight="35.0" prefWidth="200.0" promptText="Enter bid amount (LKR)" />
+        <Button fx:id="btnPlaceBid" layoutX="230.0" layoutY="115.0" mnemonicParsing="false" onAction="#handlePlaceBid" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;" text="Place Bid" textFill="#e7dddd" />
         
         <TextArea fx:id="txtArea" editable="false" layoutX="14.0" layoutY="160.0" prefHeight="226.0" prefWidth="572.0" style="-fx-font-family: 'Consolas'; -fx-font-size: 14px;" />
     </children>
